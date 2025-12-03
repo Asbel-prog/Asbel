@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asbel Kipkosgei — Electrical & Telecommunications</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#0a3d62;
+      --telecom:#1e90ff;
+      --muted:#d9d9d9;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#172022;
+      --radius:12px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg, var(--bg), #ffffff);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Header */
+    header{
+      background:linear-gradient(90deg,var(--navy), #0f4c81);
+      color:white;
+      padding:36px 20px;
+      text-align:center;
+    }
+    .header-inner{
+      max-width:1000px;
+      margin:auto;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .avatar{
+      width:140px;
+      height:140px;
+      border-radius:18px;
+      overflow:hidden;
+      flex:0 0 140px;
+      border:4px solid rgba(255,255,255,0.14);
+      background:#e6eefc;
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-text h1{margin:0;font-size:1.6rem;letter-spacing:0.2px}
+    .hero-text p{margin:6px 0 0 0;font-size:0.95rem;opacity:0.95}
+
+    /* Nav */
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      padding:12px 10px;
+      background:transparent;
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter: blur(6px);
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--navy);
+      padding:8px 14px;
+      border-radius:8px;
+      font-weight:600;
+      transition:all .18s ease;
+    }
+    nav a:hover{
+      background:rgba(26,115,232,0.08);
+      transform:translateY(-2px);
+      box-shadow:0 6px 18px rgba(30,144,255,0.07);
+    }
+
+    /* Layout */
+    main{max-width:980px;margin:26px auto;padding:0 16px;}
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      margin-bottom:18px;
+      box-shadow:0 6px 24px rgba(15,20,30,0.04);
+      opacity:0;
+      transform:translateY(12px);
+      transition:opacity .6s ease, transform .6s ease;
+    }
+    .card.visible{opacity:1;transform:none}
+
+    h2{color:var(--navy);margin:0 0 10px 0;font-size:1.1rem}
+    ul{padding-left:18px;margin:6px 0 0 0}
+    li{margin:8px 0}
+
+    /* contact box */
+    .contact-box{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .contact-left{min-width:180px}
+    .contact-right{display:flex;gap:12px;align-items:center}
+    .contact-item{
+      display:flex;gap:10px;align-items:center;padding:8px 12px;border-radius:10px;
+      background:linear-gradient(180deg, rgba(14,60,116,0.04), rgba(14,60,116,0.01));
+      border:1px solid rgba(14,60,116,0.04);
+      font-weight:600;
+    }
+    .btn-primary{
+      display:inline-block;
+      background:var(--telecom);
+      color:white;
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 10px 22px rgba(30,144,255,0.12);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(30,144,255,0.14)}
+
+    /* footer */
+    footer{max-width:980px;margin:10px auto 40px auto;padding:0 16px;text-align:center;color:#50606a;font-size:0.95rem}
+
+    /* Responsive */
+    @media (max-width:600px){
+      .header-inner{gap:12px}
+      .hero-text h1{font-size:1.2rem}
+      .avatar{width:110px;height:110px;flex:0 0 110px;border-radius:14px}
+      .contact-box{flex-direction:column;align-items:stretch}
+      nav{padding-left:8px;padding-right:8px}
+    }
+
+    /* small helper for icons */
+    .icon{width:20px;height:20px;display:inline-block;vertical-align:middle}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="avatar">
+        <!-- Put your photo file named asbel.jpg in the same folder -->
+        <img src="asbel.jpg" alt="Asbel Kipkosgei">
+      </div>
+      <div class="hero-text">
+        <h1>Asbel Kipkosgei</h1>
+        <p>Electrical & Telecommunications Engineering — Multimedia University of Kenya</p>
+        <p style="opacity:0.9;margin-top:6px;font-size:0.9rem">Registration: ENG-219-032/2025 · New to website development — this is my first site</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#skills">Skills</a>
+    <a href="#values">Values</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Asbel Kipkosgei</strong>, an Electrical & Telecommunications Engineering student at Multimedia University of Kenya. I'm new to website development and this is my first website — I'm learning web skills and exploring software projects alongside my studies.</p>
+    </section>
+
+    <section id="hobbies" class="card">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li><strong>Chess</strong> — competitive player and hobbyist</li>
+        <li><strong>Music</strong> — listening and exploring different genres</li>
+        <li><strong>Software-related activities</strong> — learning programming and small tools</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills & Strengths</h2>
+      <ul>
+        <li>Good problem solver</li>
+        <li>Reliable leader</li>
+        <li>Innovative thinker</li>
+        <li>Works well in team environments</li>
+      </ul>
+    </section>
+
+    <section id="values" class="card">
+      <h2>Core Values</h2>
+      <ul>
+        <li>Honesty</li>
+        <li>Innovation</li>
+        <li>Teamwork</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+
+      <div class="contact-box">
+        <div class="contact-left">
+          <p style="margin:0 0 10px 0;font-weight:600">Reach out:</p>
+          <div class="contact-item" aria-hidden="true">
+            <!-- phone icon -->
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 16.5v3a2 2 0 0 1-2.2 2c-9.3-.9-16.8-8.4-17.7-17.7A2 2 0 0 1 3.5 1H6.5a1 1 0 0 1 1 .8c.2 1 .6 2.1 1.3 3.1.4.6.2 1.4-.4 1.8L7.7 8.9c1.9 3.3 4.9 6.3 8.2 8.2l1.2-1.1c.4-.6 1.2-.8 1.8-.4 1 .6 2.1 1 3.1 1.3.4.1.8.5.8 1z" fill="#0a3d62"/>
+            </svg>
+            <span style="font-weight:600">0740270130</span>
+          </div>
+
+          <div style="height:8px"></div>
+
+          <div class="contact-item" aria-hidden="true">
+            <!-- mail icon -->
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-11z" stroke="#0a3d62" stroke-width="1.2" fill="none"/>
+              <path d="M21 6.5l-9 6-9-6" stroke="#0a3d62" stroke-width="1.2" fill="none"/>
+            </svg>
+            <span style="font-weight:600">biwottasbel4@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <a class="btn-primary" href="mailto:biwottasbel4@gmail.com">Email Me</a>
+          <a class="btn-primary" href="tel:0740270130" style="background:transparent;color:var(--navy);border:1px solid var(--muted)">Call</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Asbel Kipkosgei · Multimedia University of Kenya
+  </footer>
+
+  <script>
+    // simple fade-in on scroll
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {threshold:0.12});
+
+    cards.forEach(c => observer.observe(c));
+
+    // smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
